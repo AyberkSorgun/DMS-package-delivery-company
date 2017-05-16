@@ -10,16 +10,17 @@
 	<style>
 
 		.button {
-		background-color: #4CAF50;
-		border: none;
-		color: white;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 4px 2px;
-		cursor: pointer;
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 300px;
 	}
 	</style>
 </head>
@@ -34,9 +35,9 @@
 	<br><br><br><br>
 	
 	<div>
-		<button class = "button"> Track Your Package </button>
-		<button class = "button"> View Your Bills </button>
-		<button class = "button"> View Your Account Information </button>
+		<a href = "track_your_packages.php"> <button class = "button"> Track Your Package </button> </a><br>
+		<a href = "view_bills.php"> <button class = "button"> View Your Bills </button> </a><br>
+		<a href = "view_account_info.php"> <button class = "button"> View Your Account Information </button> </a><br>
 	</div>
 
 </body>

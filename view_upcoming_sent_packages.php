@@ -11,7 +11,7 @@
 
 		$res =  mysqli_query($db,"SELECT * FROM shipment where to_st_ID = '$st_ID' or from_st_ID = '$st_ID'");
 
-		echo "<b> Upcoming/sent packages <b><br><br>";		
+		echo "<b> Upcoming/sent packages </b><br><br>";		
 		echo '<table class= "table table-striped table-bordered table-hover" border = "1">';
 		echo "<tr><th>Type</th><th>Track Number</th><th>Sender ID</th><th>Receiver Name</th><th>Receiver Phone</th><th>From Store ID</th><th>To Store ID</th><th>Date of Shipment</th><th>Estimated date of arrival</th><th>Cost</th><th>Shipment Status</th></tr>";
 		
