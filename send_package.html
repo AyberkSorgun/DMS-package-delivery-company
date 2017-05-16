@@ -1,31 +1,29 @@
 <html>
 	<head>
+
+	<title> Send new packages </title>
 	<script type="text/javascript">
 		function toggleTB(what){
 			if(what.checked){
-				document.packageForm.wtype.disabled=0;
-				document.packageForm.ttype.disabled=0;
-				document.packageForm.content.disabled=0;
-				document.packageForm.weight.disabled=0;
+				document.packageForm.wtype1.disabled=0;
+				document.packageForm.content1.disabled=0;
+				document.packageForm.weight1.disabled=0;
 			}
 			else{
-				document.packageForm.wtype.disabled=1;
-				document.packageForm.ttype.disabled=1;
-				document.packageForm.content.disabled=1;
-				document.packageForm.weight.disabled=1;
+				document.packageForm.wtype1.disabled=1;
+				document.packageForm.content1.disabled=1;
+				document.packageForm.weight1.disabled=1;
 			}
 		}
 
 		function toggleTB2(what){
 			if(what.checked){
 				document.packageForm.wtype2.disabled=0;
-				document.packageForm.ttype2.disabled=0;
 				document.packageForm.content2.disabled=0;
 				document.packageForm.weight2.disabled=0;
 			}
 			else{
 				document.packageForm.wtype2.disabled=1;
-				document.packageForm.ttype2.disabled=1;
 				document.packageForm.content2.disabled=1;
 				document.packageForm.weight2.disabled=1;
 			}
@@ -34,13 +32,11 @@
 		function toggleTB3(what){
 			if(what.checked){
 				document.packageForm.wtype3.disabled=0;
-				document.packageForm.ttype3.disabled=0;
 				document.packageForm.content3.disabled=0;
 				document.packageForm.weight3.disabled=0;
 			}
 			else{
 				document.packageForm.wtype3.disabled=1;
-				document.packageForm.ttype3.disabled=1;
 				document.packageForm.content3.disabled=1;
 				document.packageForm.weight3.disabled=1;
 			}
@@ -66,12 +62,18 @@
 			Receiver Phone:
 			<input type="text" name= "receiver_phone" placeholder = "+905341121212"><br>
 			Receiver Store ID:
-			<input type="text" name= "to_st_ID" placeholder= "700015"><br><br>
+			<input type="text" name= "to_st_ID" placeholder= "700015"><br>
+			Timeliness: 
+			<select name="ttype">
+				<option selected="selected">Choose</option>
+				<option value="overnight">Overnight</option>
+				<option value="2nd day">2nd day</option>
+				<option value="7-day shipping">7-day shipping</option>
+			</select>
+			<br><br>
+
 
 			<input type="checkbox" name="package1" value="package1" onClick="toggleTB(this)" checked>Package 1<br>
-			
-			<!-- Package No:
-			<input type="text" name= "package_ID" placeholder="13"> <br> -->
 			Package type: 
 			<select name="wtype1">
 				<option selected="selected">Choose</option>
@@ -80,14 +82,6 @@
 				<option value="small box">Small Box</option>
 				<option value="mid-sized box">Mid-Sized Box</option>
 				<option value="large box">Large Box</option>
-			</select>
-			<br>
-			Timeliness: 
-			<select name="ttype1">
-				<option selected="selected">Choose</option>
-				<option value="overnight">Overnight</option>
-				<option value="2nd day">2nd day</option>
-				<option value="7-day shipping">7-day shipping</option>
 			</select>
 			<br>
 			Content: 
@@ -113,14 +107,6 @@
 				<option value="large box">Large Box</option>
 			</select>
 			<br>
-			Timeliness: 
-			<select name="ttype2" disabled>
-				<option selected="selected">Choose</option>
-				<option value="overnight">Overnight</option>
-				<option value="2nd day">2nd day</option>
-				<option value="7-day shipping">7-day shipping</option>
-			</select>
-			<br>
 			Content: 
 			<select name="content2"  disabled>
 				<option selected="selected">Choose</option>
@@ -144,14 +130,6 @@
 				<option value="large box">Large Box</option>
 			</select>
 			<br>
-			Timeliness: 
-			<select name="ttype3" disabled>
-				<option selected="selected">Choose</option>
-				<option value="overnight">Overnight</option>
-				<option value="2nd day">2nd day</option>
-				<option value="7-day shipping">7-day shipping</option>
-			</select>
-			<br>
 			Content: 
 			<select name="content3"  disabled>
 				<option selected="selected">Choose</option>
@@ -163,8 +141,6 @@
 			Weight: 
 			<input type="text" name="weight3" placeholder="12,34"  disabled>
 			<br><br>
-
-
 
 			<input type="submit" value="Send packages">
 		</form>

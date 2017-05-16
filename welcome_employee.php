@@ -35,12 +35,16 @@
 	
 	<div>
 		<a href = "send_package.html"> <button class = "button"> Send New Package </button> </a>
-		<button class = "button"> View Upcoming/Sent Packages </button>
+		<br>
+		<a href = "view_upcoming_sent_packages.php"> <button class = "button"> View Upcoming/Sent Packages </button> </a>
+		<br>
 		<a href = "create_customer.html"> <button class = "button"> Create New Customer </button> </a>
-		<button class = "button"> Process Delivered Packages </button>
-		<button class = "button"> Create Bill </button>
+		<br>
+		<a href = "process_delivered_packages.php"> <button class = "button"> Process Delivered Packages </button> </a>
+		<br>
+		<button class = "button"> Generate Bill </button>
 	</div>
-	<?php
+	<!-- <?php
 		$res =  mysqli_query($db,"select * from c_authentication" );
 		echo '<table class= "table table-striped table-bordered table-hover" border = "1">';
 		echo "<tr><th>Username</th><th>Password</th></tr>";
@@ -52,7 +56,7 @@
 			echo "</td></tr>";
 		}
 		echo "</table>";
-	?>
+	?> -->
 
 </body>
 
