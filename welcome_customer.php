@@ -35,7 +35,7 @@
 	<br><br><br><br>
 	
 	<div>
-		<a href = "track_your_packages.php"> <button class = "button"> Track Your Package </button> </a><br>
+		<a href = "track_your_packages.php"> <button class = "button"> Track Your Packages </button> </a><br>
 		<a href = "view_bills.php"> <button class = "button"> View Your Bills </button> </a><br>
 		<a href = "view_account_info.php"> <button class = "button"> View Your Account Information </button> </a><br>
 	</div>
