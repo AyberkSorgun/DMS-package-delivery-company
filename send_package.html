@@ -1,0 +1,173 @@
+<html>
+	<head>
+	<script type="text/javascript">
+		function toggleTB(what){
+			if(what.checked){
+				document.packageForm.wtype.disabled=0;
+				document.packageForm.ttype.disabled=0;
+				document.packageForm.content.disabled=0;
+				document.packageForm.weight.disabled=0;
+			}
+			else{
+				document.packageForm.wtype.disabled=1;
+				document.packageForm.ttype.disabled=1;
+				document.packageForm.content.disabled=1;
+				document.packageForm.weight.disabled=1;
+			}
+		}
+
+		function toggleTB2(what){
+			if(what.checked){
+				document.packageForm.wtype2.disabled=0;
+				document.packageForm.ttype2.disabled=0;
+				document.packageForm.content2.disabled=0;
+				document.packageForm.weight2.disabled=0;
+			}
+			else{
+				document.packageForm.wtype2.disabled=1;
+				document.packageForm.ttype2.disabled=1;
+				document.packageForm.content2.disabled=1;
+				document.packageForm.weight2.disabled=1;
+			}
+		}
+
+		function toggleTB3(what){
+			if(what.checked){
+				document.packageForm.wtype3.disabled=0;
+				document.packageForm.ttype3.disabled=0;
+				document.packageForm.content3.disabled=0;
+				document.packageForm.weight3.disabled=0;
+			}
+			else{
+				document.packageForm.wtype3.disabled=1;
+				document.packageForm.ttype3.disabled=1;
+				document.packageForm.content3.disabled=1;
+				document.packageForm.weight3.disabled=1;
+			}
+		}
+
+		function addPackageField(){
+			var input = document.createElement('input');
+			input.type = "text";
+			var div = document.getElementById("ufield");
+			div.appendChild(input);
+		}
+		</script>
+	</head>
+
+	<body>
+		<div id = "ufield">
+		<form name= "packageForm" method = "POST" action = "send_package_server.php">
+			
+			Customer ID: 
+			<input type="text" name= "cust_ID" placeholder="102"> <br>
+			Receiver Name:
+			<input type="text" name= "receiver_name" placeholder= "Cisem Altan"><br>
+			Receiver Phone:
+			<input type="text" name= "receiver_phone" placeholder = "+905341121212"><br>
+			Receiver Store ID:
+			<input type="text" name= "to_st_ID" placeholder= "700015"><br><br>
+
+			<input type="checkbox" name="package1" value="package1" onClick="toggleTB(this)" checked>Package 1<br>
+			
+			<!-- Package No:
+			<input type="text" name= "package_ID" placeholder="13"> <br> -->
+			Package type: 
+			<select name="wtype1">
+				<option selected="selected">Choose</option>
+				<option value="flat">Flat</option>
+				<option value="envelope">Envelope</option>
+				<option value="small box">Small Box</option>
+				<option value="mid-sized box">Mid-Sized Box</option>
+				<option value="large box">Large Box</option>
+			</select>
+			<br>
+			Timeliness: 
+			<select name="ttype1">
+				<option selected="selected">Choose</option>
+				<option value="overnight">Overnight</option>
+				<option value="2nd day">2nd day</option>
+				<option value="7-day shipping">7-day shipping</option>
+			</select>
+			<br>
+			Content: 
+			<select name="content1">
+				<option selected="selected">Choose</option>
+				<option value="hazardous">Hazardous</option>
+				<option value="international">International</option>
+				<option value="normal">Normal</option>
+			</select>
+			<br>
+			Weight: 
+			<input type="text1" name="weight" placeholder="12,34">
+			<br><br>
+
+			<input type="checkbox" name="package2" value="package2" onClick="toggleTB2(this)">Package 2<br>
+			Package type: 
+			<select name="wtype2" disabled>
+				<option selected="selected">Choose</option>
+				<option value="flat">Flat</option>
+				<option value="envelope">Envelope</option>
+				<option value="small box">Small Box</option>
+				<option value="mid-sized box">Mid-Sized Box</option>
+				<option value="large box">Large Box</option>
+			</select>
+			<br>
+			Timeliness: 
+			<select name="ttype2" disabled>
+				<option selected="selected">Choose</option>
+				<option value="overnight">Overnight</option>
+				<option value="2nd day">2nd day</option>
+				<option value="7-day shipping">7-day shipping</option>
+			</select>
+			<br>
+			Content: 
+			<select name="content2"  disabled>
+				<option selected="selected">Choose</option>
+				<option value="hazardous">Hazardous</option>
+				<option value="international">International</option>
+				<option value="normal">Normal</option>
+			</select>
+			<br>
+			Weight: 
+			<input type="text" name="weight2" placeholder="12,34"  disabled>
+			<br><br>
+
+			<input type="checkbox" name="package3" value="package3" onClick="toggleTB3(this)">Package 3<br>
+			Package type: 
+			<select name="wtype3" disabled>
+				<option selected="selected">Choose</option>
+				<option value="flat">Flat</option>
+				<option value="envelope">Envelope</option>
+				<option value="small box">Small Box</option>
+				<option value="mid-sized box">Mid-Sized Box</option>
+				<option value="large box">Large Box</option>
+			</select>
+			<br>
+			Timeliness: 
+			<select name="ttype3" disabled>
+				<option selected="selected">Choose</option>
+				<option value="overnight">Overnight</option>
+				<option value="2nd day">2nd day</option>
+				<option value="7-day shipping">7-day shipping</option>
+			</select>
+			<br>
+			Content: 
+			<select name="content3"  disabled>
+				<option selected="selected">Choose</option>
+				<option value="hazardous">Hazardous</option>
+				<option value="international">International</option>
+				<option value="normal">Normal</option>
+			</select>
+			<br>
+			Weight: 
+			<input type="text" name="weight3" placeholder="12,34"  disabled>
+			<br><br>
+
+
+
+			<input type="submit" value="Send packages">
+		</form>
+		</div>
+	</body>
+</html>
