@@ -37,13 +37,13 @@
 	<div>
 		<a href = "send_package.html"> <button class = "button"> Send New Package </button> </a>
 		<br>
-		<a href = "view_upcoming_sent_packages.php"> <button class = "button"> View Upcoming/Sent Packages </button> </a>
+		<a href = "view_upcoming_sent_packages.php"> <button class = "button"> View Upcoming/Sent Shipments </button> </a>
 		<br>
 		<a href = "create_customer.html"> <button class = "button"> Create New Customer </button> </a>
 		<br>
 		<a href = "process_delivered_packages.php"> <button class = "button"> Process Delivered Packages </button> </a>
 		<br>
-		<button class = "button"> Generate Bill </button>
+		<a href = "generate_bill.php"> <button class = "button"> Generate Bill </button> </a>
 	</div>
 	<!-- <?php
 		$res =  mysqli_query($db,"select * from c_authentication" );

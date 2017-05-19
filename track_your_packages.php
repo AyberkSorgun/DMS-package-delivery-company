@@ -43,7 +43,7 @@
 			die();
 	}
 
-	$query = mysqli_query($db,"SELECT * FROM (shipment natural join ship_packs) natural join package where cust_ID = '$cust_ID' and sender_ID = cust_ID");
+	$query = mysqli_query($db,"SELECT * FROM ((shipment natural join ship_packs) natural join package) natural join bill_ships where cust_ID = '$cust_ID' and sender_ID = cust_ID");
 	
 	echo "<b><h3> Your Packages</h3> </b>";
 	echo '<table class= "table table-striped table-bordered table-hover" border = "1">';
@@ -113,6 +113,8 @@
 				echo "</td><td align='center'>";
 			}
 			echo $result['ship_status'];
+			echo "</td><td align='center'>";
+			echo $result['bill_ID'];
 
 			echo "</td></tr>";
 	}
