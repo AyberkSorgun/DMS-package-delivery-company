@@ -43,7 +43,7 @@
 			die();
 	}
 
-	$query = mysqli_query($db,"SELECT * FROM (shipment natural join ship_packs) natural join package where cust_ID = '$cust_ID'");
+	$query = mysqli_query($db,"SELECT * FROM (shipment natural join ship_packs) natural join package where cust_ID = '$cust_ID' and sender_ID = cust_ID");
 	
 	echo "<b><h3> Your Packages</h3> </b>";
 	echo '<table class= "table table-striped table-bordered table-hover" border = "1">';
