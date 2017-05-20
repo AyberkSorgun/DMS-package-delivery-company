@@ -6,37 +6,41 @@
 	<body>
 		<form method = "POST" action = "create_customer_server.php">
 			<br>
-			Username: 
+			Username*: 
 			<input type="text" name= "username" placeholder="zcavdar14">
-			Password:
+			Password*:
 			<input type="text" name= "password" placeholder="123456789"> <br><br>
-			Email:
+			Email*:
 			<input type="text" name= "email" placeholder="zcavdar14@ku.edu.tr"> <br>
-			Phone:
+			Phone*:
 			<input type="text" name= "phone" placeholder="905437749193"> <br>
 
 			<br><u>Name</u><br>
-			First Name:
+			First Name*:
 			<input type="text" name= "fname" placeholder="Zafer"> <br>
 			Middle Name:
 			<input type="text" name= "mname" placeholder="Can"> <br>
-			Last Name:
+			Last Name*:
 			<input type="text" name= "lname" placeholder="Cavdar"> <br>
 			<br><br>  <u>Address</u> <br>
-			Street:
+			Street*:
 			<input type="text" name= "street" placeholder="Rumelifeneri Yolu"> <br>
-			District:
+			District*:
 			<input type="text" name= "district" placeholder="Sariyer"> <br>			
-			City:
+			City*:
 			<input type="text" name= "city" placeholder="Istanbul"> <br>
-			Country:
+			Country*:
 			<input type="text" name= "country" placeholder="Turkey"> <br>
 			
 			<br>
-			Frequent User:
+			Frequent User*:
 			<input type="radio" name="isFreq" value= 1> Yes
 			<input type="radio" name="isFreq" value= 0 checked> No <br><br>
+
+			<i>*Required</i><br><br>
 			<input type="submit" value="Create Customer">
+
+
 		</form>
 	</body>
 </html>

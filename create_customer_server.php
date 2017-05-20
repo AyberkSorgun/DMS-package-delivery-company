@@ -16,6 +16,30 @@
 		$city = $_POST['city'];
 		$country = $_POST['country'];
 
+		$shouldDie = False;
+
+		if (strlen($password) < 6){
+			echo "ERROR! Your password should have at least 6 characters!<br>";
+			$shouldDie = True;
+		} else if (!ctype_alnum($password)){
+			echo "ERROR! Your password should be consisting of only alphanumerical characters!<br>";
+			$shouldDie = True;
+		}
+
+		if ($email == "" or $phone == "" or $street == "" or $district == "" or $city == "" or $country == ""){
+			echo "ERROR! Email, phone or address cannot be left blank!<br>";
+			$shouldDie = True;
+		}
+
+		if ($username == ""){
+			echo "ERROR! Username cannot be left blank!<br>";
+			$shouldDie = True;
+		}
+		
+		if ($shouldDie){
+			die();
+		}
+
 		$sql1 = "INSERT INTO customer VALUES ('".$cust_ID."','".$username."','".$email."','".$phone."')";
 		$sql2 = "INSERT INTO c_authentication VALUES ('".$username."','".$password."')";
 		$sql3 = "INSERT INTO fullname VALUES ('".$username."','".$fname."','".$mname."','".$lname."')";
